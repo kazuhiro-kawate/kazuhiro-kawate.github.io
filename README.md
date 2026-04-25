@@ -109,15 +109,12 @@
     </section>
 
     <section>
-        <h2>History</h2>
+        <h2>Career</h2>
         <ul>
             <li>ZEN大学 知能情報社会学部 入学</li>
             <li>日本財団HUMAIプログラム 奨励金B 採択</li>
             <li>ZEN大学 特待奨学生 採択</li>
-            <p>
-  圏論における随伴関手の定義は、以下のような同型によって与えられます：
-  \[ F \dashv G \iff \text{Hom}_{\mathcal{D}}(F(C), D) \cong \text{Hom}_{\mathcal{C}}(C, G(D)) \]
-</p>
+            <li>統計データ分析コンペティション2026 大学・一般の部 総務大臣賞</li>
         </ul>
     </section>
 
