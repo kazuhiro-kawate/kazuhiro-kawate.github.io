@@ -70,11 +70,11 @@
 <body>
 
 <header>
-    <h1>川手 一浩</h1>
+    <h1>川手 知拓</h1>
     <div class="affiliation">
         Kazuhiro Kawate<br>
         ZEN University (Student)<br>
-        前橋数学会 代表
+        ZEN大学数学会 代表
     </div>
 </header>
 
@@ -101,9 +101,11 @@
     </section>
 
     <section>
-        <h2>Education（学歴）</h2>
+        <h2>History</h2>
         <ul>
             <li>ZEN大学 知能情報社会専攻（在学中）</li>
+            <li>日本財団HUMAIプログラム 奨励金B 採択<\li>
+            <li>ZEN大学 特待奨学生 採択<\li>
         </ul>
     </section>
 
