@@ -1,5 +1,7 @@
 # Kazuhiro Kawate — String diagram research space
 
+公開先：https://limxiao.github.io/（GitHubユーザー名：limxiao、表示名：Kazuhiro Kawate）。サイト内の氏名表記は従来どおり。以下の未公開・旧URLの記載は制作時点の記録です。
+
 図式の中だけで探索・閲覧する個人研究サイト。縦ホイールは横スクロールに変換し、詳細は箱から開くパネルで読む。HTML / CSS / SVG / JavaScript の静的サイトで、外部ライブラリ・CDN・WebGL は使用しない。
 
 ## ローカルで見る
