@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><title>Guide — Kazuhiro Kawate</title><meta name="description" content="川手知拓の個人研究サイト。数学・言語学・計算機科学のあいだを、触れられるストリング図式で探索する。"><link rel="icon" href="../assets/favicon.svg" type="image/svg+xml"><link rel="preload" href="../assets/fonts/bricolage-latin.woff2" as="font" type="font/woff2" crossorigin><link rel="stylesheet" href="../assets/style.css?v=1937d854e7c4"><link rel="canonical" href="https://kazuhiro-kawate.github.io/guide/"><script src="../assets/diagram-model.js?v=383373b5e519" defer></script><script src="../assets/diagram-motion.js?v=80850148ad25" defer></script><script src="../assets/site.js?v=06f39db7d010" defer></script></head><body class="article-page"><a class="skip-link" href="#content">本文へスキップ</a><header class="site-header"><a class="identity" href="../index.html" aria-label="Kazuhiro Kawate ホーム"><svg viewBox="0 0 38 24" aria-hidden="true"><path d="M0 6h10c8 0 10 12 18 12h10M0 18h10C18 18 20 6 28 6h10"/><path class="mark-bridge" d="M14 7c4 2 6 6 10 8"/></svg></a><nav aria-label="メインナビゲーション"><a href="../guide/"  aria-current=page>Guide</a><a href="../about/"  >About</a><a href="../research/"  >Research</a><a href="../projects/"  >Projects</a><a href="../notes/"  >Notes</a></nav><a class="github-link" href="https://github.com/kazuhiro-kawate" aria-label="GitHubプロフィール"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3v11m0-7h10m0 0v-4m0 4v7c0 3-2 5-5 5H7"/><circle cx="7" cy="3" r="2"/><circle cx="17" cy="3" r="2"/><circle cx="7" cy="19" r="2"/></svg></a></header><main id="content" class="article-layout"><aside class="article-aside"><a href="../index.html">← Back to the diagram</a><span class="article-number">01</span><span class="eyebrow">操作と図式</span></aside><article class="prose"><h1>Guide</h1>
+<p>ストリング図式と、このサイトの操作方法。</p>
+<h2>サイトの動かし方</h2>
+<p>マウスの縦ホイールで左右へ探索できます。タッチでは横にスワイプし、キーボードでは図式領域にフォーカスして左右キー・Home・Endで移動します。下のセクション名から箱へ移動することもできます。</p>
+<p>箱をクリックすると本文が開きます。本文では通常の縦スクロールで読み、CloseまたはEscapeで図式へ戻れます。通常ページへのリンクからも読めます。</p>
+<p>箱やσの印を左右へドラッグして動かします。箱のハンドルへTabで移動し、左右キーでも調整できます。Shiftで大きく移動、Enterで確定、Escapeで取り消します。Undo / Redo、またはCmd / Ctrl + Zで操作を戻せます。</p>
+<h2>この図式の読み方</h2>
+<p>線は対象、箱は射を表します。時間は左から右へ。同じ線に沿った箱の並びは合成、平行な線の並びはテンソル積です。</p>
+<p>対象はA・B・Cです。左端からGuide=f、About=g、Research=h、Projects=i、Notes=j。各箱が属する対象A・B・Cはページを開くたびにランダムに決まります。初期の横方向の順序は変えず、箱の色と型表示は接続するワイヤーに合わせます。ページを開くたび、σ₁・σ₂・σ₃から1〜6項の交差列をランダムに生成します。出力の並びはその列によって変わり、図式上の表示で確認できます。色は線を追跡するための目印です。</p>
+<p>記号と研究セクションの対応は、ナビゲーションのための比喩です。研究分野自体に数学的な型を与えているわけではありません。</p>
+<h2>交差を越える</h2>
+<p>箱を左右へドラッグすると、同じ対象のワイヤーを追って交差を越えます。対称性の自然性 <code>σ ∘ (f⊗id) = (id⊗f) ∘ σ</code> を使う操作です。箱が別の高さへ移っても、対象Aの箱はAのままです。</p>
+<p>同じ対象に置かれた箱どうしは、初期の横順に対応する合成順序を保ちます。前の箱を先へ運ぶと、必要に応じて後ろの箱も先へ移ります。異なる線の独立した箱は、交換法則により前後の並びを変えられます。σの印も動かせます。</p>
+<h2>編み替えと往復</h2>
+<p>「編み替え」は <code>σ₁σ₂σ₁ = σ₂σ₁σ₂</code> と、途中にある箱の自然性を使います。「σ²」は隣り合う二つの対称性を挿入・除去します。どちらも線のつながりと同じ線上の箱の順序を変えません。</p>
+<p>操作はUndo / Redoで戻せます。結合と単位はstrictな表示で省略しています。現在の生成射は、この3本と5つの単項射です。これらの直列・並列合成を複数ポートの箱としてまとめられます。任意の新しい生成射を追加する汎用エディタは未実装です。</p>
+<p>複製・消去・カップ・キャップは、一般の対称モノイダル圏に自動で備わる構造ではありません。それぞれを許す追加構造なしに操作として追加することはしません。</p>
+<h2>動きの意味と表示位置</h2>
+<p>交差の前後では、箱・ワイヤー・σの位置を同時に補間します。補間中も線の端点は箱へ接続されます。途中の描画は公理による変形の視覚表現であり、各中間フレームを別の数学的等式としては扱いません。カーソルに対するたわみも視覚上のフィードバックです。</p>
+<p>通常のドラッグでは、画面の横位置・縦位置を固定します。箱を持ったままホイールで横へ探索できます。Shiftを押しながら画面端へ持っていくと、自動的に横へ探索できます。OSまたはGuideの設定で動きを抑えると、補間を行わずに操作できます。</p>
+<p><a href="https://www.mscs.dal.ca/~selinger/papers/graphical.pdf">図式の数学的背景：Peter Selinger, A survey of graphical languages for monoidal categories</a></p>
+<h2>対称性を2回</h2>
+<p>対称モノイダル圏での等式：<code>σ(B,A) ∘ σ(A,B) = id(A⊗B)</code>。下の実験ではその両辺を切り替えます。一般の編み込みの交差除去には拡張しません。</p>
+<h2>直列・並列合成</h2>
+<p>「合成」を押し、箱の＋で対象を選択します。直列は入力と出力の型が一致する箱を、ワイヤー上の順でまとめます。Guide=fとAbout=gがともにAにある場合、fの後にgを適用する合成は <code>g∘f : A→A</code> です。並列は異なる対象に作用する箱をテンソル積としてまとめます。</p>
+<p>「並列合成に恒等射を含める」で、選択していない線を合成箱に含めるか選べます。オンなら、たとえば配置によって <code>i⊗j⊗idA</code> と表示し、白いポートが恒等射を示します。オフなら <code>i⊗j</code> の2本だけが箱のポートになり、Aは箱に属さず通過します。合成前に選び、異なる設定の箱を同じ図式に置けます。</p>
+<p>対象が隣接していない配置では、選択していない線に開いた通路を残し、既知の因子をまとめて表示します。その線が箱の入力・出力に含まれるとは扱いません。周囲を含む図式全体の射は両方の設定で同じです。</p>
+<p>この実装は、既知の生成射f・g・h・i・jの因子をまとめる操作です。入れ子の並列合成では表示の恒等拡張を外し、内部の因子のテンソル積を組み直してから、選択した設定に応じて周囲のワイヤーへ恒等拡張します。任意の未知の多入力・多出力の箱を不透明なまま合成する汎用エディタではありません。</p>
+<p>合成箱を選んで「展開」で元の因子へ戻せます。入れ子の合成もでき、Undo / Redoで操作を戻せます。合成箱をクリックすると、含まれる各セクションの本文を開けます。</p>
+<h2>σ²を配置する</h2>
+<p>「σ²を置く」を押し、ワイヤー上の場所をクリックします。上側は1↔2、下側は2↔3、中央は3↔1を選びます。必要な空き領域を作るため、後続の箱や交差を横へ広げます。視点は勝手に移動しません。</p>
+<p>キーボードでは左右キーで位置、上下キーで2本の組を選び、Enterで配置、Escapeで中止できます。配置した「σ² ×」をクリックすると、その組だけを除去します。交差は入力欄と配置操作を合わせて64個までです。σ²は2個分を使います。</p>
+<h2>交差列を編集する</h2>
+<p>図式のσ列、または右上の「交差列」から入力欄を開きます。σ₁・σ₂・σ₃のボタンで右へ追加します。「削除」は末尾の1項を消します。列の中の交差を押すとその位置を選択でき、σのボタンで置き換え、削除でその項を消せます。「末尾へ」で追加に戻ります。交差はドラッグで並べ替えられます。選択した項は左右ボタン、Shift＋左右キーでも移動できます。1・2・3キーとBackspace / Deleteでも操作できます。「実行」で左から順に図式へ反映します。空の交差列では交換がなくなります。箱の射はそのまま残ります。</p>
+<p>このサイトの記法ではσ₁=(1 2)、σ₂=(2 3)、σ₃=(3 1)です。σ₃は通常の隣接交換の添字ではなく、外側2本の交換に付けた名前です。描画では外側2本を直接斜めに交差させ、中央のワイヤーは水平に保ちます。斜めの中央部分は直線で、水平線から出入りする角だけを滑らかに丸めます。交差は線同士の接続を意味しません。同じ番号を続けたσᵢ²も、そのまま表示します。対称モノイダル圏では恒等射と等しいものの、自動では消去しません。</p>
+<p>列の編集では出力の対象の順序、つまり表す射が変わる場合があります。「編み替え」は列に現れるσᵢσᵢ₊₁σᵢとσᵢ₊₁σᵢσᵢ₊₁を切り替え、同じ射を保ちます。任意の列の編集を等式とは扱いません。動きの途中は視覚的な補間です。</p>
+<p>図式へσ²を置いたり除去したりすると入力欄も更新します。入力欄を開いた状態で配置を始めた場合、配置後に更新された欄へ戻ります。Undo / Redoも入力・図式・出力の並びを一緒に戻します。「図式から読込」で未実行の入力を捨てて読み直せます。</p>
+<p>32個以上では長い列の案内を表示し、64個で追加を止めます。残りが1個以下のときは、2個必要なσ²の配置も止めます。入力を勝手に切り詰めたり簡約したりしません。入力欄は縦にスクロールでき、図式は横へ探索できます。</p>
+<p>列を短くしても、表示位置を急に変えないためキャンバスの横幅を保持します。Resetは、そのページを開いたときの列・箱・キャンバス幅へ戻します。初期生成は最大6項、手動編集は最大64項です。</p><section class="experiment" aria-labelledby="symmetry-title"><p class="eyebrow">A SMALL EXPERIMENT / 01</p><h2 id="symmetry-title">対称性と恒等射</h2><p>二つの対称性の合成と恒等射の表示を切り替えます。</p><svg class="symmetry-diagram" viewBox="0 0 620 160" role="img" aria-label="対象AとBの2回の対称性。ボタンで恒等射の表示に切り替えられます"><g class="double-cross"><path class="a" d="M20 42H150C220 42 220 118 310 118S400 42 470 42H600"/><path class="gap" d="M20 118H150C220 118 220 42 310 42S400 118 470 118H600"/><path class="b" d="M20 118H150C220 118 220 42 310 42S400 118 470 118H600"/></g><g class="identity-wires" hidden><path class="a" d="M20 42H600"/><path class="b" d="M20 118H600"/></g><text x="4" y="25">A</text><text x="4" y="150">B</text><text x="598" y="25">A</text><text x="598" y="150">B</text></svg><p class="equation">σ<span>(B,A)</span> ∘ σ<span>(A,B)</span> = id<span>(A⊗B)</span></p><button class="text-button symmetry-toggle" type="button" hidden aria-pressed="false">恒等射に切り替える <span aria-hidden="true">↔</span></button><p class="small">対称性の公理に基づく表示切替です。一般の編み込みで交差を消せるとは限りません。</p></section><div class="article-next"><span class="eyebrow">NEXT CONNECTION</span><a href="../about/">About ↗</a></div></article></main><footer class="site-footer"><a href="../index.html">Kazuhiro Kawate</a><span>Mathematics · Linguistics · Computer Science</span><span>© 2026 Kazuhiro Kawate</span></footer></body></html>

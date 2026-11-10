@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://kazuhiro-kawate.github.io/sitemap.xml
