@@ -20,6 +20,6 @@
 
 ハングルの文字・発音・ローマ字入力を結びつけて学ぶ、ブラウザ完結型の韓国語学習ツールです。文字・発音・意味の練習、音声合成、学習履歴の端末内保存に対応しています。
 
-[GitHubでソースと使い方を見る](https://github.com/kazuhiro-kawate/hangul-bridge)
+[GitHubでソースと使い方を見る](https://github.com/limxiao/hangul-bridge)
 
-[GitHubのプロフィールを見る](https://github.com/kazuhiro-kawate)
+[GitHubのプロフィールを見る](https://github.com/limxiao)
