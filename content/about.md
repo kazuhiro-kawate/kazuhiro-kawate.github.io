@@ -13,5 +13,5 @@ ZEN大学で数理科学を学んでいます。代数学、表現論、圏論�
 ## Links
 
 - [LinkedIn](https://www.linkedin.com/in/kazuhiro-kawate/)
-- [GitHub](https://github.com/kazuhiro-kawate)
+- [GitHub](https://github.com/limxiao)
 - [ZENRON](https://zenron.jp)
